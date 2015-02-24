@@ -1,11 +1,19 @@
 FROM ubuntu:14.04
 MAINTAINER Spartako <fabio.castaldo@lambdago.it>
 
-ADD ./bin /usr/local/bin
-ADD ./bitcoin-0.10.0/bin /usr/local/bin
-ADD ./bitcoin-0.10.0/include /usr/local/include
-ADD ./bitcoin-0.10.0/lib /usr/local/lib
-RUN chmod a+x /usr/local/bin/*
+RUN apt-get update &&\
+    apt-get install -y wget
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN cd /root &&\
+    wget --no-check-certificate https://bitcoin.org/bin/0.10.0/bitcoin-0.10.0-linux64.tar.gz &&\
+    tar xvfz bitcoin-0.10.0-linux64.tar.gz &&\
+    cd bitcoin-0.10.0 &&\
+    cp -r bin /usr/ &&\
+    cp -r include /usr/ &&\
+    cp -r lib /usr/
+
+RUN chmod a+x /usr/bin/*
 
 # VOLUME ["/data"]
 ENV DATA /data
