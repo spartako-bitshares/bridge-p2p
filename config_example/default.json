@@ -1,0 +1,17 @@
+{ 
+  "db": {
+    "mongodb": "mongodb://192.168.59.103:27017/bridge-p2p"
+  },
+  "bts":{
+    "user" : "user",
+    "pass" : "pass",
+    "host" : "192.168.59.103",
+    "port" : 4000
+  },
+  "btc":{
+    "host": "192.168.59.103",
+    "port": 18332,
+    "user": "bitcoinrpc",
+    "pass":  "pass"
+  }
+}

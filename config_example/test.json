@@ -1,0 +1,5 @@
+{ 
+  "db": {
+    "mongodb": "mongodb://192.168.59.103:27017/bridge-p2p-test"
+  }  
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bridge-p2p-bts",
+  "description": "bridge engine for exchanging bitbtc and btc",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "co": "3.1.0",
+    "co-mongo": "*",
+    "config": "^1.9.0",    
+    "mongodb": "^2.0.11",
+    "thunkify": "*",
+    "underscore": "*",
+    "use-strict": "*",
+    "bitshares" : "*",
+    "bitcoin" : "*"
+  },
+  "devDependencies": {
+    "co-mocha": "*",
+    "expect.js": "*"
+  }
+}
